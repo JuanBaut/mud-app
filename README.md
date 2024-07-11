@@ -1,38 +1,76 @@
-### ExpressTrack_Front
+# MUD-App: Maps, Users, and Deliveries Application
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview
+
+MUD-App is a Next.js application designed to manage maps, users, and deliveries. It provides a robust platform for tracking and coordinating delivery operations with an intuitive user interface and powerful mapping capabilities.
+
+## Features
+
+- Interactive maps using Leaflet
+- User authentication and management
+- Delivery tracking and routing
+- Responsive design for both desktop and mobile use
+
+## Tech Stack
+
+- **Framework**: Next.js 14.2.3
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Jotai
+- **Form Handling**: React Hook Form with Zod validation
+- **API Requests**: Axios, TanStack Query
+- **UI Components**: Shadcn/UI
+- **Mapping**: Leaflet, React Leaflet
+- **Authentication**: Backend with cookies.js
+- **Image Handling**: Next Cloudinary
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```
+   pnpm install
+   ```
+3. Run the development server:
+   ```
+   pnpm dev
+   ```
+4. Open [http://localhost:3001](http://localhost:3001) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Scripts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `pnpm dev`: Runs the app in development mode
+- `pnpm build`: Builds the app for production
+- `pnpm start`: Runs the built app in production mode
+- `pnpm lint`: Runs the linter
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing Strategy
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I am implementing a comprehensive testing strategy using Cypress for end-to-end testing. This will ensure the reliability and stability of our application as we continue to develop and scale.
 
-## Learn More
+### Cypress Integration (TODO)
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Set up Cypress for end-to-end testing
+- [ ] Write tests for critical user flows
+- [ ] Implement component testing for reusable UI elements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Continuous Integration and Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I am setting up a robust CI/CD pipeline using GitHub Actions to automate our build, test, and deployment processes.
 
-## Deploy on Vercel
+### GitHub Actions (TODO)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Implement automated builds on push and pull requests
+- [ ] Run Cypress tests as part of the CI pipeline
+- [ ] Set up automated deployments to staging and production environments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Enhancements
+
+- Implement real-time updates for delivery tracking
+- Add performance optimizations for map rendering
+- Enhance accessibility features
+- Implement internationalization (i18n) support
+
+## License
+
+[MIT License](LICENSE)
