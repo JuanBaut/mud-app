@@ -1,6 +1,6 @@
 {
-  "name": "EasyTrack",
-  "short_name": "EasyTrack",
+  "name": "MudApp",
+  "short_name": "MudApp",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -17,4 +17,3 @@
   "background_color": "#ffffff",
   "display": "standalone"
 }
-

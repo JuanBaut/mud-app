@@ -1,44 +1,41 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
-export default function ThemeSwitch() {
-  const { setTheme } = useTheme();
+export default function ThemeToggle() {
+  const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute(
+        "content",
+        theme === "light" ? "#ebefee" : "#070908",
+      );
+    }
+  }, [theme]);
+
+  const handleChangeTheme = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  };
 
   return (
-    <>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant={"ghost"}
-            size={"icon"}
-            className="ml-4 size-8 rounded-full"
-          >
-            <SunIcon className="size-5 dark:hidden" />
-            <MoonIcon className="hidden size-5 dark:block" />
-            <span className="sr-only">Cambiar tema</span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => setTheme("light")}>
-            Claro
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("dark")}>
-            Oscuro
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("system")}>
-            Sistema
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </>
+    <Button
+      variant="ghost"
+      size="icon"
+      className="size-8"
+      onMouseDown={handleChangeTheme}
+    >
+      <SunIcon className="size-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <MoonIcon className="absolute size-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
 }

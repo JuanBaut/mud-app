@@ -14,7 +14,7 @@ export default function Landing() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                    Reduce costos y toma decisiones inteligentes con EasyTrack.
+                    Reduce costos y toma decisiones inteligentes con MudApp.
                   </h1>
                   <p className="max-w-[600px] text-muted md:text-xl">
                     Adaptabilidad y análisis se combinan para una logística más

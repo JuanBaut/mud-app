@@ -62,7 +62,7 @@ export default function UserBadge() {
     <>
       {userData ? (
         <>
-          <div className="mx-4 hidden space-x-2 sm:block">
+          <div className="hidden space-x-2 sm:block">
             <Badge>{userData.name}</Badge>
             <Badge variant={"secondary"}>{userData.email}</Badge>
             <Badge variant={"outline"} onClick={handleLogout}>

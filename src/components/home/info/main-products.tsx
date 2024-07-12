@@ -17,7 +17,7 @@ export default function MainProducts() {
                 Tu aliado para una logística eficiente y rentable.
               </h2>
               <p className="max-w-[600px] text-muted md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-                EasyTrack te permite gestionar tu flota de vehículos de manera
+                MudApp te permite gestionar tu flota de vehículos de manera
                 eficiente con seguimiento en tiempo real, visualización de
                 puntos de visita, optimización de rutas dinámicas y análisis de
                 datos para obtener información valiosa y mejorar tus operaciones

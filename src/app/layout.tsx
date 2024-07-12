@@ -11,7 +11,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "EasyTrack",
+  title: "MudApp",
   description: "Tu aliado para una logística eficiente y rentable",
 };
 
